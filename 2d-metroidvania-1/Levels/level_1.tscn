@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dm3t03sg8b7vl"]
+
+[ext_resource type="PackedScene" uid="uid://bli0sigk1xqeq" path="res://Scenes/Player/player.tscn" id="1_n0qsc"]
+[ext_resource type="Texture2D" uid="uid://qa6aglm0g5w5" path="res://Sprites/Environment/2d_metroidvania_serie_mockup_1_tileset.png" id="2_dilhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mhv4"]
+size = Vector2(48, 16)
+
+[node name="level_1" type="Node2D" unique_id=606114583]
+
+[node name="Player" parent="." unique_id=555752719 instance=ExtResource("1_n0qsc")]
+position = Vector2(-15, -37)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2137437528]
+zoom = Vector2(3, 3)
+
+[node name="ground" type="Node2D" parent="." unique_id=2132234450]
+
+[node name="temporary_ground_1" type="StaticBody2D" parent="ground" unique_id=165501978]
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground_1" unique_id=1731826116]
+texture = ExtResource("2_dilhk")
+region_enabled = true
+region_rect = Rect2(32, 80, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground_1" unique_id=2011901579]
+shape = SubResource("RectangleShape2D_3mhv4")
+
+[node name="temporary_ground_2" type="StaticBody2D" parent="ground" unique_id=1519301353]
+position = Vector2(48, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground_2" unique_id=440768614]
+texture = ExtResource("2_dilhk")
+region_enabled = true
+region_rect = Rect2(32, 80, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground_2" unique_id=1340700587]
+shape = SubResource("RectangleShape2D_3mhv4")
+
+[node name="temporary_ground_3" type="StaticBody2D" parent="ground" unique_id=613150080]
+position = Vector2(-48, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground_3" unique_id=783026101]
+texture = ExtResource("2_dilhk")
+region_enabled = true
+region_rect = Rect2(32, 80, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground_3" unique_id=1611698194]
+shape = SubResource("RectangleShape2D_3mhv4")
+
+[node name="temporary_ground_4" type="StaticBody2D" parent="ground" unique_id=271240027]
+position = Vector2(-96, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground/temporary_ground_4" unique_id=966237541]
+texture = ExtResource("2_dilhk")
+region_enabled = true
+region_rect = Rect2(32, 80, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/temporary_ground_4" unique_id=2146720430]
+shape = SubResource("RectangleShape2D_3mhv4")
